@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayuda y Preguntas Frecuentes - Smart-Workspace-Tabs</title>
+  <meta name="description"
+    content="Centro de ayuda, atajos de teclado y preguntas frecuentes sobre la extensión Smart-Workspace-Tabs para Chrome.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="../assets/img/logo.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="alternate" hreflang="en" href="https://kaxzwisx.github.io/smart-workspace-tabs/help.html">
+  <link rel="alternate" hreflang="es" href="https://kaxzwisx.github.io/smart-workspace-tabs/es/help.html">
+  <link rel="alternate" hreflang="ja" href="https://kaxzwisx.github.io/smart-workspace-tabs/ja/help.html">
+  <link rel="alternate" hreflang="x-default" href="https://kaxzwisx.github.io/smart-workspace-tabs/help.html">
+</head>
+
+<body>
+
+  <!-- Navegación del Sitio -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link">
+        <img src="../assets/img/logo.png" alt="Logotipo de Smart-Workspace-Tabs" class="brand-logo">
+        <div class="brand-title">
+          <span class="brand-name">Smart-Workspace-Tabs</span>
+          <span class="brand-tag">Espacios Locales</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html#features" class="nav-link">Características</a></li>
+          <li><a href="index.html#showcase" class="nav-link">Capturas</a></li>
+          <li><a href="privacy.html" class="nav-link">Privacidad</a></li>
+          <li><a href="help.html" class="nav-link active">Ayuda y FAQ</a></li>
+          <li><a href="changelog.html" class="nav-link">Novedades</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Selector de Idioma -->
+        <a href="../help.html" class="btn-control" hreflang="en" lang="en" title="Switch to English"
+          aria-label="Switch to English">
+          <span>EN</span>
+        </a>
+        <a href="../ja/help.html" class="btn-control" hreflang="ja" lang="ja" title="日本語に切り替え" aria-label="日本語に切り替え">
+          <span>JA</span>
+        </a>
+        <button id="theme-toggle" class="btn-control" type="button" aria-label="Cambiar tema">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
+          </svg>
+        </button>
+
+        <a href="index.html#install" class="btn btn-primary">
+          <span>Instalar Extensión</span>
+        </a>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <div class="badge badge-brand" style="margin-bottom: 0.75rem;">Centro de Soporte</div>
+        <h1 class="page-title">Ayuda y Preguntas Frecuentes</h1>
+        <p class="page-subtitle">
+          Todo lo que necesitas saber sobre el uso de Smart-Workspace-Tabs, atajos de teclado, ahorro de memoria y
+          gestión de respaldos.
+        </p>
+      </div>
+    </div>
+
+    <div class="container content-body">
+      <!-- Sección: Primeros Pasos -->
+      <section class="content-section" id="getting-started">
+        <h2>1. Primeros Pasos</h2>
+        <div class="faq-list">
+          <div class="faq-item open">
+            <button class="faq-question" type="button">
+              <span>¿Qué ocurre al instalar Smart-Workspace-Tabs por primera vez?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Al instalarse, la extensión crea una copia de seguridad automática de cada ventana abierta de Chrome,
+                convirtiéndola en un espacio de trabajo inicial (por ejemplo, "Mis pestañas", "Ventana 2", etc.).
+                Ninguna pestaña se cierra ni se pierde. Además, se crea una pestaña fija del Panel de Control para
+                acceder rápidamente a todas las funciones.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>¿Cómo funciona el cambio de espacios en la misma ventana?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Debido a que Chrome no permite "ocultar" pestañas de forma nativa, la extensión ejecuta un proceso
+                ordenado de cuatro pasos:
+              </p>
+              <ol style="margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-muted);">
+                <li>Guarda el estado actual de las pestañas y grupos en el espacio activo.</li>
+                <li>Restaura las pestañas, fijadas y grupos del nuevo espacio seleccionado.</li>
+                <li>Cierra las pestañas anteriores manteniendo la pestaña fija del Panel activa para no cerrar la
+                  ventana.</li>
+                <li>Pone las pestañas secundarias en modo de suspensión para no consumir memoria hasta que hagas clic en
+                  ellas.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>¿Puedo abrir el mismo espacio en dos ventanas a la vez?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Por diseño y seguridad de tus datos, cada espacio de trabajo solo puede estar abierto en una ventana a
+                la vez. Si seleccionas un espacio que ya está en uso en otra ventana, Smart-Workspace-Tabs enfocará
+                dicha ventana y la traerá al primer plano.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: Grupos de Pestañas -->
+      <section class="content-section" id="tab-groups">
+        <h2>2. Conversión de Grupos de Pestañas</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>¿Cómo convierto los grupos de pestañas de Chrome en espacios?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Puedes convertirlos fácilmente desde varios accesos:
+              </p>
+              <ul style="margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-muted);">
+                <li>Desde <strong>Ajustes &rsaquo; General</strong>: pulsa en "Convertir Grupos de Pestañas de Chrome".
+                </li>
+                <li>Desde el aviso superior en la lista de pestañas de cualquier espacio.</li>
+                <li>Desde la biblioteca de espacios en la pantalla de Inicio.</li>
+              </ul>
+              <p style="margin-top: 0.5rem;">
+                Cada grupo se convierte en un espacio independiente preservando su nombre, etiqueta de color y todas sus
+                pestañas. Las pestañas no agrupadas se mantienen abiertas.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>¿Se pueden arrastrar pestañas entre espacios?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                ¡Sí! En la vista de tablero puedes arrastrar pestañas individuales o grupos seleccionados directamente
+                sobre cualquier espacio en la barra lateral, o soltarlas en el área "Soltar pestañas aquí" para crear un
+                espacio nuevo al instante.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: Duplicados y Vistas de Dominio -->
+      <section class="content-section" id="duplicates">
+        <h2>3. Limpiador de Duplicados y Vistas de Dominio</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>¿Cómo funciona el limpiador de pestañas duplicadas?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Dispone de dos métodos de comparación:
+              </p>
+              <ul style="margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-muted);">
+                <li><strong>URL Exacta:</strong> Compara pestañas cuya dirección web coincide al 100%.</li>
+                <li><strong>Ignorar Parámetros y Hash:</strong> Identifica la misma página incluso si contiene
+                  identificadores de sesión o etiquetas de seguimiento (como <code>?utm_source</code>).</li>
+              </ul>
+              <p style="margin-top: 0.5rem;">
+                Antes de cerrar nada, una ventana de vista previa muestra qué pestaña se conservará (la fijada, activa o
+                más reciente) y cuáles se cerrarán.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>¿Qué son las Vistas por Dominio?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Una Vista de Dominio es una pestaña personalizada dentro de un espacio que aísla un sitio web en
+                particular (como <code>github.com</code> o <code>docs.google.com</code>). Reúne todas las pestañas
+                abiertas o guardadas de ese dominio y subdominios, permitiendo acciones en lote: enfocar, cerrar todas,
+                guardar como recursos o limpiar duplicados específicos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: Atajos de Teclado -->
+      <section class="content-section" id="shortcuts">
+        <h2>4. Atajos de Teclado</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Atajo</th>
+                <th>Acción</th>
+                <th>Ámbito</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><kbd>Alt + S</kbd></td>
+                <td>Abrir ventana de Búsqueda Rápida</td>
+                <td>En cualquier pestaña de Chrome</td>
+              </tr>
+              <tr>
+                <td><kbd>Alt + D</kbd></td>
+                <td>Abrir o enfocar el Panel de Control</td>
+                <td>En cualquier pestaña de Chrome</td>
+              </tr>
+              <tr>
+                <td><kbd>Ctrl + K</kbd> / <kbd>&cmd; + K</kbd></td>
+                <td>Enfocar barra de Búsqueda Rápida</td>
+                <td>Dentro del Panel de Control</td>
+              </tr>
+              <tr>
+                <td><kbd>Enter</kbd></td>
+                <td>Saltar a la pestaña encontrada (cambia de espacio si aplica)</td>
+                <td>En la ventana de búsqueda</td>
+              </tr>
+              <tr>
+                <td><kbd>Ctrl + Enter</kbd> / <kbd>&cmd; + Enter</kbd></td>
+                <td>Abrir una nueva copia de la pestaña en la ventana actual</td>
+                <td>En la ventana de búsqueda</td>
+              </tr>
+              <tr>
+                <td><kbd>Esc</kbd></td>
+                <td>Cerrar ventana modal, cajón o búsqueda</td>
+                <td>En cualquier diálogo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Sección: Ahorro de Memoria -->
+      <section class="content-section" id="sleeping">
+        <h2>5. Suspensión de Pestañas y Ahorro de RAM</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>¿Cómo ahorra memoria la suspensión de pestañas?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Utiliza la API nativa de descarte de Chrome. Al suspender una pestaña, el navegador libera la memoria
+                RAM asociada a los procesos JavaScript y renderizado, reduciendo el consumo de ~200-400 MB por pestaña a
+                solo unos pocos kilobytes. La pestaña sigue visible y al hacer clic en ella vuelve a cargar de
+                inmediato.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>¿Qué pestañas quedan protegidas de la suspensión?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                De forma predeterminada, la extensión nunca suspende:
+              </p>
+              <ul style="margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-muted);">
+                <li>Pestañas fijadas.</li>
+                <li>Pestañas reproduciendo sonido o vídeo (Spotify, YouTube, videollamadas).</li>
+                <li>La pestaña que estás viendo activamente.</li>
+                <li>Cualquier dominio o URL añadida a tu lista de exclusión en <strong>Ajustes &rsaquo; Suspensión de
+                    pestañas</strong>.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: Respaldos y Restauración -->
+      <section class="content-section" id="backups">
+        <h2>6. Respaldos, Exportación y Recuperación</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>¿Cómo exportar o restaurar mi información?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Dirígete a <strong>Ajustes &rsaquo; Respaldo y datos</strong> en el panel de control.
+              </p>
+              <ul style="margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-muted);">
+                <li><strong>Exportar Respaldo:</strong> Descarga un archivo
+                  <code>smart-workspace-tabs-backup-AAAA-MM-DD.json</code>.
+                </li>
+                <li><strong>Importar Respaldo:</strong> Puedes elegir entre <em>Combinar</em> (añade nuevos espacios sin
+                  modificar los actuales) o <em>Reemplazar</em> (restaura la copia íntegra).</li>
+                <li><strong>Respaldo Automático:</strong> Guarda copias diarias en tu carpeta local
+                  <code>Descargas/Smart-Workspace-Tabs/</code> sin intervención.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>¿Qué pasa si mi navegador se cierra inesperadamente?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Al reiniciar Chrome, el servicio en segundo plano analiza las ventanas abiertas y las empareja con tus
+                espacios guardados. Si una ventana tiene pestañas que no corresponden a ningún espacio existente, las
+                guarda en un espacio seguro llamado "Pestañas no guardadas", garantizando que nunca pierdas información.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Pie de Página -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link">
+            <img src="../assets/img/logo.png" alt="Logotipo de Smart-Workspace-Tabs" class="brand-logo">
+            <div class="brand-title">
+              <span class="brand-name">Smart-Workspace-Tabs</span>
+              <span class="brand-tag">Espacios Locales</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Organiza tus pestañas en espacios. 100% local, sin telemetría ni rastreo. Privacidad garantizada.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#features">Características</a></li>
+            <li><a href="index.html#showcase">Galería de Capturas</a></li>
+            <li><a href="index.html#install">Instalar Extensión</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Documentación</h4>
+          <ul class="footer-links">
+            <li><a href="help.html">Ayuda y FAQ</a></li>
+            <li><a href="privacy.html">Política de Privacidad</a></li>
+            <li><a href="changelog.html">Registro de Cambios</a></li>
+            <li><a href="help.html#shortcuts">Atajos de Teclado</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Comunidad y Código</h4>
+          <ul class="footer-links">
+            <li><a href="../help.html" hreflang="en" lang="en">English Version</a></li>
+            <li><a href="../ja/help.html" hreflang="ja" lang="ja">日本語版</a></li>
+            <li><a href="https://github.com/kaxzwisx/smart-workspace-tabs" target="_blank"
+                rel="noopener noreferrer">Repositorio en GitHub</a></li>
+            <li><a href="https://github.com/kaxzwisx/smart-workspace-tabs/issues" target="_blank"
+                rel="noopener noreferrer">Abrir Consulta o Reportar Fallo</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Smart-Workspace-Tabs. Todos los derechos reservados.</div>
+        <div>¿Tienes dudas? Abre una incidencia en GitHub.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad - Smart-Workspace-Tabs</title>
+  <meta name="description"
+    content="Política de Privacidad de la extensión Smart-Workspace-Tabs. 100% local, cero telemetría y sin servidores.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="../assets/img/logo.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="alternate" hreflang="en" href="https://kaxzwisx.github.io/smart-workspace-tabs/privacy.html">
+  <link rel="alternate" hreflang="es" href="https://kaxzwisx.github.io/smart-workspace-tabs/es/privacy.html">
+  <link rel="alternate" hreflang="ja" href="https://kaxzwisx.github.io/smart-workspace-tabs/ja/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://kaxzwisx.github.io/smart-workspace-tabs/privacy.html">
+</head>
+
+<body>
+
+  <!-- Navegación del Sitio -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link">
+        <img src="../assets/img/logo.png" alt="Logotipo de Smart-Workspace-Tabs" class="brand-logo">
+        <div class="brand-title">
+          <span class="brand-name">Smart-Workspace-Tabs</span>
+          <span class="brand-tag">Espacios Locales</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html#features" class="nav-link">Características</a></li>
+          <li><a href="index.html#showcase" class="nav-link">Capturas</a></li>
+          <li><a href="privacy.html" class="nav-link active">Privacidad</a></li>
+          <li><a href="help.html" class="nav-link">Ayuda y FAQ</a></li>
+          <li><a href="changelog.html" class="nav-link">Novedades</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Selector de Idioma -->
+        <a href="../privacy.html" class="btn-control" hreflang="en" lang="en" title="Switch to English"
+          aria-label="Switch to English">
+          <span>EN</span>
+        </a>
+        <a href="../ja/privacy.html" class="btn-control" hreflang="ja" lang="ja" title="日本語に切り替え" aria-label="日本語に切り替え">
+          <span>JA</span>
+        </a>
+        <button id="theme-toggle" class="btn-control" type="button" aria-label="Cambiar tema">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
+          </svg>
+        </button>
+
+        <a href="index.html#install" class="btn btn-primary">
+          <span>Instalar Extensión</span>
+        </a>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <div class="badge badge-brand" style="margin-bottom: 0.75rem;">Privacidad Total</div>
+        <h1 class="page-title">Política de Privacidad</h1>
+        <p class="page-subtitle">
+          Smart-Workspace-Tabs fue diseñada con un principio fundamental: tus hábitos de navegación, pestañas, enlaces y
+          notas te pertenecen exclusivamente a ti y nunca salen de tu ordenador.
+        </p>
+        <div class="page-meta">Última actualización: Noviembre de 2026 · Vigente desde: Noviembre de 2026</div>
+      </div>
+    </div>
+
+    <div class="container content-body">
+      <!-- Sección 1 -->
+      <section class="content-section">
+        <h2>1. Resumen y Principios Fundamentales</h2>
+        <p>
+          Smart-Workspace-Tabs no recopila, transmite, vende ni monetiza ninguno de tus datos personales o de
+          navegación.
+          No existen rastreadores analíticos, scripts de telemetría, cookies de terceros ni servidores backend asociados
+          a la extensión.
+        </p>
+        <div class="callout">
+          <p>
+            <strong>Garantía Clara:</strong> La extensión realiza <strong>cero solicitudes externas a la red</strong>.
+            Todos los espacios de trabajo, listas de pestañas, notas y tareas residen únicamente en la base de datos
+            local IndexedDB de tu navegador.
+          </p>
+        </div>
+      </section>
+
+      <!-- Sección 2 -->
+      <section class="content-section">
+        <h2>2. Almacenamiento y Arquitectura Local</h2>
+        <p>
+          Durante el uso de Smart-Workspace-Tabs:
+        </p>
+        <ul>
+          <li><strong>Base de Datos Local:</strong> Todos los registros se guardan mediante la API nativa del navegador
+            <code>IndexedDB</code> (usando Dexie.js) en el perfil local de Google Chrome en tu ordenador.
+          </li>
+          <li><strong>Estado de Sesión:</strong> La relación temporal entre las ventanas abiertas y los espacios activos
+            se guarda en la memoria de Chrome con <code>chrome.storage.session</code> y se purga al cerrar el navegador.
+          </li>
+          <li><strong>Sin Sincronización Remota:</strong> No requiere crear cuentas, ni contraseñas, ni sincronización
+            en la nube. Tus datos solo se mueven si descargas manualmente una copia de seguridad en formato JSON.</li>
+          <li><strong>Aislamiento de Contenidos:</strong> La extensión no declara <code>host_permissions</code> ni
+            utiliza scripts de contenido inyectados. Por lo tanto, no puede leer el contenido de las páginas,
+            formularios, contraseñas ni pulsaciones de teclado.</li>
+        </ul>
+      </section>
+
+      <!-- Sección 3 -->
+      <section class="content-section">
+        <h2>3. Permisos de Chrome y su Justificación</h2>
+        <p>
+          Las extensiones de Chrome solicitan permisos específicos en <code>manifest.json</code> para comunicarse con
+          las APIs del navegador. Explicamos detalladamente la función de cada uno:
+        </p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Permiso</th>
+                <th>Tipo</th>
+                <th>Justificación Técnica</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>tabs</code></td>
+                <td>Requerido</td>
+                <td>Permite guardar, restaurar, cerrar y reordenar pestañas al alternar entre espacios, así como
+                  detectar duplicados y filtrar dominios.</td>
+              </tr>
+              <tr>
+                <td><code>tabGroups</code></td>
+                <td>Requerido</td>
+                <td>Permite crear, convertir y restaurar grupos nativos de pestañas de Chrome y agrupar recursos
+                  guardados en el espacio de trabajo.</td>
+              </tr>
+              <tr>
+                <td><code>storage</code></td>
+                <td>Requerido</td>
+                <td>Guarda las preferencias del usuario (tema visual, tiempos de suspensión, preferencias de interfaz y
+                  mapas de ventanas activas).</td>
+              </tr>
+              <tr>
+                <td><code>unlimitedStorage</code></td>
+                <td>Requerido</td>
+                <td>Elimina el límite estándar de 5 MB en IndexedDB para permitir almacenar amplias colecciones de
+                  espacios, notas y fondos de pantalla personalizados sin errores.</td>
+              </tr>
+              <tr>
+                <td><code>alarms</code></td>
+                <td>Requerido</td>
+                <td>Ejecuta comprobaciones periódicas en segundo plano para la suspensión de pestañas inactivas,
+                  recordatorios de tareas y copias de seguridad automáticas.</td>
+              </tr>
+              <tr>
+                <td><code>notifications</code></td>
+                <td>Requerido</td>
+                <td>Muestra alertas de escritorio locales (sin conexión) cuando finaliza un temporizador de enfoque o
+                  vence una tarea programada.</td>
+              </tr>
+              <tr>
+                <td><code>history</code></td>
+                <td>Requerido</td>
+                <td>Permite que la Búsqueda Rápida (<kbd>Alt+S</kbd>) busque en tu historial local reciente y agrega
+                  recursos visitados anteriormente. El historial jamás se exporta ni se transmite.</td>
+              </tr>
+              <tr>
+                <td><code>favicon</code></td>
+                <td>Requerido</td>
+                <td>Muestra los iconos de los sitios web en el tablero utilizando la memoria caché local de Chrome, sin
+                  generar peticiones hacia internet.</td>
+              </tr>
+              <tr>
+                <td><code>downloads</code></td>
+                <td>Opcional</td>
+                <td>Se solicita <em>únicamente</em> si activas de forma explícita las copias de seguridad automáticas en
+                  <strong>Ajustes &rsaquo; Respaldo y datos</strong> para guardar archivos JSON en tu carpeta
+                  <code>Descargas/Smart-Workspace-Tabs/</code>.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Sección 4 -->
+      <section class="content-section">
+        <h2>4. Propiedad y Portabilidad de la Información</h2>
+        <p>
+          Tienes el control total de tus datos en todo momento:
+        </p>
+        <ul>
+          <li><strong>Exportación cuando desees:</strong> Desde <strong>Ajustes &rsaquo; Respaldo y datos</strong>
+            puedes descargar un archivo <code>.json</code> transparente con todos tus espacios, enlaces, notas y tareas.
+          </li>
+          <li><strong>Importación y Combinación:</strong> Puedes transferir tus respaldos a otros ordenadores o
+            restaurar estados previos sin depender de ningún servicio externo.</li>
+          <li><strong>Eliminación Definitiva:</strong> Al pulsar <strong>Eliminar todos los datos</strong> en Ajustes,
+            se purga de inmediato la base de datos local IndexedDB. Desinstalar la extensión de Chrome también elimina
+            todos los datos almacenados de forma automática.</li>
+        </ul>
+      </section>
+
+      <!-- Sección 5 -->
+      <section class="content-section">
+        <h2>5. Servicios de Terceros</h2>
+        <p>
+          Smart-Workspace-Tabs no integra librerías externas de analítica (como Google Analytics o Mixpanel), redes de
+          publicidad ni servidores de telemetría. Todo el código y los recursos se encuentran empaquetados directamente
+          en la extensión.
+        </p>
+      </section>
+
+      <!-- Sección 6 -->
+      <section class="content-section">
+        <h2>6. Modificaciones de esta Política</h2>
+        <p>
+          En caso de actualizar esta política de privacidad, modificaremos la fecha al inicio de este documento y
+          detallaremos las novedades en el <a href="changelog.html">Registro de Cambios</a>. Dado que no almacenamos
+          correos ni datos de contacto, sugerimos revisar este enlace periódicamente.
+        </p>
+      </section>
+
+      <!-- Sección 7 -->
+      <section class="content-section">
+        <h2>7. Contacto y Consultas</h2>
+        <p>
+          Smart-Workspace-Tabs es 100% gratuita y estrictamente local. Mantenemos un compromiso absoluto con la
+          transparencia en la gestión de datos y privacidad.
+        </p>
+        <p>
+          Si tienes preguntas, comentarios o sugerencias, puedes abrir una consulta en el repositorio de la web oficial
+          en GitHub:
+          <br>
+          <a href="https://github.com/kaxzwisx/smart-workspace-tabs/issues" target="_blank"
+            rel="noopener noreferrer">https://github.com/kaxzwisx/smart-workspace-tabs/issues</a>
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Pie de Página -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link">
+            <img src="../assets/img/logo.png" alt="Logotipo de Smart-Workspace-Tabs" class="brand-logo">
+            <div class="brand-title">
+              <span class="brand-name">Smart-Workspace-Tabs</span>
+              <span class="brand-tag">Espacios Locales</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Organiza tus pestañas en espacios. 100% local, sin telemetría ni rastreo. Privacidad garantizada.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#features">Características</a></li>
+            <li><a href="index.html#showcase">Galería de Capturas</a></li>
+            <li><a href="index.html#install">Instalar Extensión</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Documentación</h4>
+          <ul class="footer-links">
+            <li><a href="help.html">Ayuda y FAQ</a></li>
+            <li><a href="privacy.html">Política de Privacidad</a></li>
+            <li><a href="changelog.html">Registro de Cambios</a></li>
+            <li><a href="help.html#backups">Guía de Respaldos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Soporte y Comunidad</h4>
+          <ul class="footer-links">
+            <li><a href="../privacy.html" hreflang="en" lang="en">English Version</a></li>
+            <li><a href="../ja/privacy.html" hreflang="ja" lang="ja">日本語版</a></li>
+            <li><a href="https://github.com/kaxzwisx/smart-workspace-tabs" target="_blank"
+                rel="noopener noreferrer">GitHub de la Web</a></li>
+            <li><a href="https://github.com/kaxzwisx/smart-workspace-tabs/issues" target="_blank"
+                rel="noopener noreferrer">Comentarios y Fallos</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Smart-Workspace-Tabs. Todos los derechos reservados.</div>
+        <div>Privacidad respaldada por arquitectura local-first.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart-Workspace-Tabs - Espacios de Trabajo 100% Locales para Chrome</title>
+  <meta name="description"
+    content="Extensión para Chrome que brinda a cada proyecto su propio espacio de trabajo con pestañas, enlaces, notas y tareas. 100% local, sin cuentas ni servidores.">
+  <meta name="keywords"
+    content="extension chrome, gestor de pestañas, grupos de pestañas, espacios de trabajo, ahorro de memoria, suspender pestañas, modo enfoque, privacidad">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="../assets/img/logo.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <meta property="og:title" content="Smart-Workspace-Tabs - Espacios de Trabajo 100% Locales para Chrome">
+  <meta property="og:description"
+    content="Organiza tus pestañas en espacios de trabajo dedicados. Guardado en tu dispositivo sin solicitudes de red.">
+  <meta property="og:image" content="../assets/img/dashboard-board.png">
+  <meta property="og:type" content="website">
+  <link rel="alternate" hreflang="en" href="https://kaxzwisx.github.io/smart-workspace-tabs/">
+  <link rel="alternate" hreflang="es" href="https://kaxzwisx.github.io/smart-workspace-tabs/es/">
+  <link rel="alternate" hreflang="ja" href="https://kaxzwisx.github.io/smart-workspace-tabs/ja/">
+  <link rel="alternate" hreflang="x-default" href="https://kaxzwisx.github.io/smart-workspace-tabs/">
+</head>
+
+<body>
+
+  <!-- Navegación del Sitio -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link">
+        <img src="../assets/img/logo.png" alt="Logotipo de Smart-Workspace-Tabs" class="brand-logo">
+        <div class="brand-title">
+          <span class="brand-name">Smart-Workspace-Tabs</span>
+          <span class="brand-tag">Espacios Locales</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#features" class="nav-link">Características</a></li>
+          <li><a href="#showcase" class="nav-link">Capturas</a></li>
+          <li><a href="#how-it-works" class="nav-link">Cómo Funciona</a></li>
+          <li><a href="privacy.html" class="nav-link">Privacidad</a></li>
+          <li><a href="help.html" class="nav-link">Ayuda y FAQ</a></li>
+          <li><a href="changelog.html" class="nav-link">Novedades</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Selector de Idioma -->
+        <a href="../index.html" class="btn-control" hreflang="en" lang="en" title="Switch to English"
+          aria-label="Switch to English">
+          <span>EN</span>
+        </a>
+        <a href="../ja/index.html" class="btn-control" hreflang="ja" lang="ja" title="日本語に切り替え" aria-label="日本語に切り替え">
+          <span>JA</span>
+        </a>
+        <!-- Botón de Tema Oscuro / Claro -->
+        <button id="theme-toggle" class="btn-control" type="button" aria-label="Cambiar tema oscuro/claro"
+          title="Cambiar tema">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
+          </svg>
+        </button>
+
+        <!-- Botón de Acción Principal -->
+        <a href="#install" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          <span>Instalar Extensión</span>
+        </a>
+
+        <!-- Menú Móvil -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sección Hero -->
+    <section class="hero-section">
+      <div class="hero-glow"></div>
+      <div class="container hero-content">
+        <div class="badge badge-brand">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          </svg>
+          100% Local y Privado · Sin Registro ni Servidores
+        </div>
+
+        <h1 class="hero-title">
+          Cada proyecto merece su propio <span class="hero-title-highlight">espacio de trabajo</span>.
+        </h1>
+
+        <p class="hero-desc">
+          Transforma el caos de pestañas en espacios organizados por proyecto con enlaces guardados, notas y listas de
+          tareas.
+          Ahorra memoria RAM suspendiendo pestañas inactivas, elimina duplicados y nunca pierdas tu contexto.
+          Tus datos jamás salen de tu navegador.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#install" class="btn btn-primary btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Añadir a Chrome — Gratis
+          </a>
+          <a href="#features" class="btn btn-secondary btn-lg">
+            Ver Características
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Compatible con Manifest V3
+          </span>
+          <span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Cero Peticiones de Red
+          </span>
+          <span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Base de Datos IndexedDB Local
+          </span>
+        </div>
+
+        <!-- Vista Previa de la Interfaz -->
+        <div class="hero-preview">
+          <div class="preview-bar">
+            <div class="preview-dot red"></div>
+            <div class="preview-dot yellow"></div>
+            <div class="preview-dot green"></div>
+            <div class="preview-title">Smart-Workspace-Tabs Dashboard — Tablero del Espacio de Trabajo</div>
+          </div>
+          <img src="../assets/img/dashboard-board.png"
+            alt="Panel de control de Smart-Workspace-Tabs mostrando pestañas abiertas y recursos guardados">
+        </div>
+      </div>
+    </section>
+
+    <!-- Barra de Rendimiento y Confianza -->
+    <section class="trust-section">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <h3>0 KB</h3>
+          <p>Datos enviados a servidores externos</p>
+        </div>
+        <div class="trust-item">
+          <h3>~0.5 s</h3>
+          <p>Autoguardado inteligente en segundo plano</p>
+        </div>
+        <div class="trust-item">
+          <h3>Hasta 80%</h3>
+          <p>Menos memoria RAM con suspensión nativa</p>
+        </div>
+        <div class="trust-item">
+          <h3>1 Clic</h3>
+          <p>Convierte grupos de pestañas de Chrome</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cuadrícula de Características -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Capacidades Avanzadas</span>
+          <h2 class="section-title">Diseñado para desarrolladores, investigadores y creadores</h2>
+          <p class="section-desc">
+            Olvídate de las pestañas perdidas o el navegador lento. Controla tus ventanas y sesiones con total libertad
+            y privacidad.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <!-- Característica 1 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <line x1="9" y1="3" x2="9" y2="21" />
+              </svg>
+            </div>
+            <h3>Espacios de Trabajo Fluidos</h3>
+            <p>
+              Cambia entre proyectos en la misma ventana. El espacio actual guarda y cierra sus pestañas, restaurando al
+              instante las del siguiente proyecto con pestañas fijadas y grupos intactos.
+            </p>
+          </div>
+
+          <!-- Característica 2 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
+              </svg>
+            </div>
+            <h3>Limpieza de Pestañas Duplicadas</h3>
+            <p>
+              Detecta y cierra páginas repetidas en un espacio o en todas las ventanas. Compara URLs exactas o ignora
+              parámetros de sesión y tokens con vista previa interactiva antes de cerrar.
+            </p>
+          </div>
+
+          <!-- Característica 3 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+            </div>
+            <h3>Vistas por Dominio</h3>
+            <p>
+              Sigue un sitio web en específico (como <code>github.com</code> o <code>notion.so</code>) en todas tus
+              pestañas y subdominios. Acciones masivas: enfocar, guardar como recursos o limpiar duplicados.
+            </p>
+          </div>
+
+          <!-- Característica 4 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+            </div>
+            <h3>Búsqueda Rápida (<kbd>Alt+S</kbd>)</h3>
+            <p>
+              Búsqueda difusa instantánea en pestañas activas, espacios cerrados, recursos guardados, tareas e
+              historial. Pulsa <kbd>Enter</kbd> para ir directo a la pestaña, cambiando de espacio automáticamente.
+            </p>
+          </div>
+
+          <!-- Característica 5 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <h3>Sesiones de Enfoque</h3>
+            <p>
+              Trabaja por bloques de tiempo (15, 25 o 50 minutos). Los temporizadores se muestran en la barra superior y
+              lateral, atenuando los demás espacios para proteger tu concentración.
+            </p>
+          </div>
+
+          <!-- Característica 6 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18.36 6.64a9 9 0 1 1-12.73 0" />
+                <line x1="12" y1="2" x2="12" y2="12" />
+              </svg>
+            </div>
+            <h3>Suspensión de Pestañas (Ahorro RAM)</h3>
+            <p>
+              Libera gigabytes de memoria descargando procesos de pestañas inactivas. Mantiene despiertas pestañas con
+              audio, fijadas o dominios personalizados que elijas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demostraciones en Profundidad -->
+    <section class="section section-alt">
+      <div class="container">
+        <!-- Showcase 1 -->
+        <div class="showcase-row">
+          <div class="showcase-content">
+            <div class="badge badge-brand" style="margin-bottom: 0.75rem;">Migración Inmediata</div>
+            <h3>Convierte Grupos de Pestañas en Espacios</h3>
+            <p>
+              ¿Ya usas los grupos de pestañas nativos de Chrome? No empieces desde cero. Smart-Workspace-Tabs los
+              detecta y los convierte en espacios independientes en un solo clic.
+            </p>
+            <ul class="showcase-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Conserva el nombre, color y todas las pestañas del grupo original.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Las pestañas fuera del grupo permanecen intactas en tu ventana.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Organiza tus espacios creados en carpetas y colecciones personalizadas.
+              </li>
+            </ul>
+            <a href="help.html#tab-groups" class="btn btn-secondary">Cómo Convertir Grupos</a>
+          </div>
+          <div class="showcase-media">
+            <img src="../assets/img/home.png"
+              alt="Pantalla de inicio mostrando biblioteca de espacios, carpetas y tiempo de enfoque">
+          </div>
+        </div>
+
+        <!-- Showcase 2 -->
+        <div class="showcase-row reverse">
+          <div class="showcase-content">
+            <div class="badge badge-brand" style="margin-bottom: 0.75rem;">Limpieza Inteligente</div>
+            <h3>Elimina Pestañas Duplicadas con Seguridad</h3>
+            <p>
+              ¿Has abierto el mismo documento o ticket de soporte varias veces? Nuestro limpiador elimina duplicados de
+              forma inteligente con vista previa antes de cerrar.
+            </p>
+            <ul class="showcase-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <strong>Coincidencia Exacta:</strong> Identifica URLs 100% idénticas en un espacio o en todas las
+                ventanas.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <strong>Ignorar Parámetros:</strong> Detecta la misma página aunque varíen tokens de sesión o enlaces
+                internos.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Protege siempre la pestaña activa y las pestañas fijadas.
+              </li>
+            </ul>
+            <a href="help.html#duplicates" class="btn btn-secondary">Reglas del Limpiador</a>
+          </div>
+          <div class="showcase-media">
+            <img src="../assets/img/duplicates.png" alt="Ventana de vista previa del limpiador de pestañas duplicadas">
+          </div>
+        </div>
+
+        <!-- Showcase 3 -->
+        <div class="showcase-row">
+          <div class="showcase-content">
+            <div class="badge badge-brand" style="margin-bottom: 0.75rem;">Trabajo Profundo</div>
+            <h3>Organiza tu Día con Sesiones de Enfoque</h3>
+            <p>
+              Mantente concentrado en una tarea a la vez. Elige tu bloque de tiempo, activa el temporizador y deja que
+              la extensión minimice distracciones.
+            </p>
+            <ul class="showcase-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Atenúa los espacios secundarios en la barra lateral para evitar cambios accidentales.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Diálogo de confirmación que previene cambiar de ventana por impulso.
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Registra minutos de enfoque por espacio almacenados de manera local para tu control.
+              </li>
+            </ul>
+            <a href="help.html#focus" class="btn btn-secondary">Detalles del Modo Enfoque</a>
+          </div>
+          <div class="showcase-media">
+            <img src="../assets/img/focus-session.png"
+              alt="Temporizador de sesión de enfoque activo en un espacio de trabajo">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería Interactiva de Capturas -->
+    <section class="section" id="showcase">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tour Visual</span>
+          <h2 class="section-title">Diseñado para la velocidad y la claridad</h2>
+          <p class="section-desc">
+            Explora una interfaz cuidada con la paleta de colores azul verdoso inspirada en Grupo Ōkami, con modo oscuro
+            y fondos personalizables.
+          </p>
+        </div>
+
+        <div class="tabs-nav">
+          <button class="tab-btn active" data-tab="tab-board">Tablero del Espacio</button>
+          <button class="tab-btn" data-tab="tab-dark">Modo Oscuro</button>
+          <button class="tab-btn" data-tab="tab-search">Búsqueda Rápida</button>
+          <button class="tab-btn" data-tab="tab-domain">Vistas de Dominio</button>
+          <button class="tab-btn" data-tab="tab-tasks">Tareas y Notas</button>
+          <button class="tab-btn" data-tab="tab-sleeping">Ahorro de RAM</button>
+          <button class="tab-btn" data-tab="tab-backup">Respaldos</button>
+        </div>
+
+        <div class="tab-panel active" id="tab-board">
+          <img src="../assets/img/dashboard-board.png"
+            alt="Vista de tablero con pestañas abiertas y recursos guardados">
+        </div>
+
+        <div class="tab-panel" id="tab-dark">
+          <img src="../assets/img/dashboard-dark.png" alt="Smart-Workspace-Tabs en elegante Modo Oscuro">
+        </div>
+
+        <div class="tab-panel" id="tab-search">
+          <img src="../assets/img/quick-search.png" alt="Búsqueda rápida activada con Alt+S">
+        </div>
+
+        <div class="tab-panel" id="tab-domain">
+          <img src="../assets/img/dashboard-domain-view.png"
+            alt="Vista de dominio agrupando pestañas de un mismo sitio">
+        </div>
+
+        <div class="tab-panel" id="tab-tasks">
+          <img src="../assets/img/dashboard-drawer-tasks.png" alt="Cajón lateral de tareas pendientes y notas rápidas">
+        </div>
+
+        <div class="tab-panel" id="tab-sleeping">
+          <img src="../assets/img/settings-sleeping.png" alt="Ajustes de suspensión de pestañas para ahorrar memoria">
+        </div>
+
+        <div class="tab-panel" id="tab-backup">
+          <img src="../assets/img/settings-backup.png" alt="Ajustes de respaldo y exportación de datos en JSON">
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo Funciona -->
+    <section class="section section-alt" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Sin Complicaciones</span>
+          <h2 class="section-title">Cómo funciona internamente</h2>
+          <p class="section-desc">
+            Arquitectura transparente que cuida los recursos de tu equipo y tu privacidad.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <h3>Instalación Segura</h3>
+            <p>
+              Al instalar por primera vez, cada ventana abierta se convierte en un espacio inicial. Ninguna pestaña se
+              pierde ni se cierra accidentalmente.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <h3>Cambio en la Misma Ventana</h3>
+            <p>
+              Al cambiar de espacio, la ventana guarda las pestañas actuales, las cierra y reconstituye las pestañas del
+              nuevo espacio sin parpadeos.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <h3>Control Total de tus Datos</h3>
+            <p>
+              Toda la información reside en IndexedDB de Chrome. Puedes exportar respaldos en JSON en cualquier momento
+              o programar copias automáticas en Descargas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instalación -->
+    <section class="section" id="install">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Empieza Hoy</span>
+          <h2 class="section-title">Instala Smart-Workspace-Tabs</h2>
+          <p class="section-desc">
+            Disponible para Google Chrome y navegadores basados en Chromium (Brave, Edge, Arc, Vivaldi).
+          </p>
+        </div>
+
+        <div class="feature-card"
+          style="max-width: 640px; margin: 0 auto; text-align: center; align-items: center; padding: 2.5rem 2rem;">
+          <div class="feature-icon-wrapper" style="width: 64px; height: 64px; margin-bottom: 1.5rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              style="width: 32px; height: 32px;">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="12" r="4" />
+              <line x1="21.17" y1="8" x2="12" y2="8" />
+              <line x1="3.95" y1="6.06" x2="8.54" y2="14" />
+              <line x1="10.88" y1="21.94" x2="15.46" y2="14" />
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Chrome Web Store</h3>
+          <p style="margin-bottom: 1.75rem; max-width: 460px; font-size: 1rem;">
+            Instalación oficial en un solo clic directamente desde Chrome Web Store con actualizaciones automáticas y
+            sin configuraciones complejas.
+          </p>
+          <a href="https://chromewebstore.google.com/detail/smart-workspace-tabs/ofckjgdgonjackfhelfilcjkmlenpeao"
+            target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" style="min-width: 260px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Añadir a Chrome — Gratis
+          </a>
+          <div
+            style="margin-top: 1.25rem; display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; font-size: 0.825rem; color: var(--text-faint);">
+            <span>✓ 100% Gratuito</span>
+            <span>✓ Verificado por Google</span>
+            <span>✓ Compatible con Chrome, Brave, Edge y Arc</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner Inferior -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="badge">Recupera el Control de tu Navegador</div>
+        <h2 class="cta-title">¿Listo para un Chrome más rápido y ordenado?</h2>
+        <p class="cta-desc">
+          Deja de perderte entre decenas de pestañas dispersas. Agrupa por proyecto, ahorra memoria y protege tu
+          privacidad.
+        </p>
+        <div class="cta-actions">
+          <a href="#install" class="btn btn-primary btn-lg">Añadir a Chrome Gratis</a>
+          <a href="privacy.html" class="btn btn-secondary btn-lg">Garantía de Privacidad</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de Página -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link">
+            <img src="../assets/img/logo.png" alt="Logotipo de Smart-Workspace-Tabs" class="brand-logo">
+            <div class="brand-title">
+              <span class="brand-name">Smart-Workspace-Tabs</span>
+              <span class="brand-tag">Espacios Locales</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Organiza tus pestañas en espacios de trabajo. 100% local, sin telemetría, sin rastreo, diseñado para tu
+            privacidad.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#features">Características</a></li>
+            <li><a href="#showcase">Galería de Capturas</a></li>
+            <li><a href="#how-it-works">Cómo Funciona</a></li>
+            <li><a href="#install">Instalar Extensión</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Documentación</h4>
+          <ul class="footer-links">
+            <li><a href="help.html">Ayuda y FAQ</a></li>
+            <li><a href="privacy.html">Política de Privacidad</a></li>
+            <li><a href="changelog.html">Registro de Cambios</a></li>
+            <li><a href="help.html#shortcuts">Atajos de Teclado</a></li>
+            <li><a href="help.html#backups">Guía de Respaldos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Soporte y Comunidad</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/kaxzwisx/smart-workspace-tabs" target="_blank"
+                rel="noopener noreferrer">GitHub de la Web</a></li>
+            <li><a href="https://github.com/kaxzwisx/smart-workspace-tabs/issues" target="_blank"
+                rel="noopener noreferrer">Comentarios y Fallos</a></li>
+            <li><a href="../index.html" hreflang="en" lang="en">English Version</a></li>
+            <li><a href="../ja/index.html" hreflang="ja" lang="ja">日本語版</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Smart-Workspace-Tabs. Estilo inspirado en el arte de Grupo Ōkami.</div>
+        <div>100% Gratuito. Filosofía Local-First.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

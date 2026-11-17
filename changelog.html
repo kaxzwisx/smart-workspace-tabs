@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changelog - Smart-Workspace-Tabs</title>
+  <meta name="description" content="Release notes and version history for Smart-Workspace-Tabs Chrome Extension.">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/img/logo.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="alternate" hreflang="en" href="https://kaxzwisx.github.io/smart-workspace-tabs/changelog.html">
+  <link rel="alternate" hreflang="es" href="https://kaxzwisx.github.io/smart-workspace-tabs/es/changelog.html">
+  <link rel="alternate" hreflang="ja" href="https://kaxzwisx.github.io/smart-workspace-tabs/ja/changelog.html">
+  <link rel="alternate" hreflang="x-default" href="https://kaxzwisx.github.io/smart-workspace-tabs/changelog.html">
+</head>
+
+<body>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link">
+        <img src="assets/img/logo.png" alt="Smart-Workspace-Tabs logo" class="brand-logo">
+        <div class="brand-title">
+          <span class="brand-name">Smart-Workspace-Tabs</span>
+          <span class="brand-tag">Local Workspaces</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html#features" class="nav-link">Features</a></li>
+          <li><a href="index.html#showcase" class="nav-link">Preview</a></li>
+          <li><a href="privacy.html" class="nav-link">Privacy</a></li>
+          <li><a href="help.html" class="nav-link">Help &amp; FAQ</a></li>
+          <li><a href="changelog.html" class="nav-link active">Changelog</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Language Switcher -->
+        <a href="es/changelog.html" class="btn-control" hreflang="es" lang="es" title="Cambiar a Español"
+          aria-label="Cambiar a Español">
+          <span>ES</span>
+        </a>
+        <a href="ja/changelog.html" class="btn-control" hreflang="ja" lang="ja" title="日本語に切り替え" aria-label="日本語に切り替え">
+          <span>JA</span>
+        </a>
+        <button id="theme-toggle" class="btn-control" type="button" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
+          </svg>
+        </button>
+
+        <a href="index.html#install" class="btn btn-primary">
+          <span>Get Extension</span>
+        </a>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <div class="badge badge-brand" style="margin-bottom: 0.75rem;">Releases &amp; Updates</div>
+        <h1 class="page-title">Changelog</h1>
+        <p class="page-subtitle">
+          Track updates, feature additions, and performance improvements across all versions of Smart-Workspace-Tabs.
+        </p>
+      </div>
+    </div>
+
+    <div class="container content-body">
+      <div class="timeline">
+
+        <!-- Entry: Version 1.0.0 -->
+        <article class="timeline-entry">
+          <div class="timeline-header">
+            <span class="timeline-version">v1.0.0</span>
+            <span class="timeline-badge">Initial Release</span>
+            <span class="timeline-date">November 2026</span>
+          </div>
+
+          <div class="content-section" style="margin-bottom: 1.5rem;">
+            <h3>Workspaces &amp; Tab Management</h3>
+            <ul>
+              <li><strong>Local Workspaces:</strong> Dedicated workspace per project or task. Switching workspaces
+                automatically saves and closes current tabs, restoring the target workspace in the same window.</li>
+              <li><strong>First-Run Auto Import:</strong> Every open window is automatically snapshotted into its own
+                initial workspace on first install.</li>
+              <li><strong>Debounced Autosave:</strong> All tab modifications (opening, closing, moving, grouping,
+                navigating) are debounced and saved within ~0.5 s with per-window locks.</li>
+              <li><strong>Convert Chrome Tab Groups:</strong> One-click conversion of existing Chrome native tab groups
+                into independent workspaces, preserving group names and colors.</li>
+              <li><strong>Drag &amp; Drop:</strong> Move individual or multi-selected tabs onto sidebar workspaces or
+                "Drop tabs here" zone to create a new workspace.</li>
+            </ul>
+
+            <h3>Productivity &amp; Organization</h3>
+            <ul>
+              <li><strong>Pinned Dashboard:</strong> Persistent full-screen dashboard tab in each window featuring Home,
+                Library, Folders, and To-Dos.</li>
+              <li><strong>Workspace Board:</strong> Side-by-side view of active open tabs, saved project resources,
+                notes drawer, and task checklist.</li>
+              <li><strong>Domain Views:</strong> Dedicated views to follow specific sites (e.g. <code>github.com</code>)
+                with bulk actions (focus, close all, save as resources, clean duplicates).</li>
+              <li><strong>Duplicate Tab Cleaner:</strong> Identifies duplicate tabs across workspaces or all windows
+                using exact URL matching or query/hash-stripped matching with interactive preview.</li>
+              <li><strong>Focus Sessions:</strong> Built-in local timer (15, 25, 50 min or custom), dimming background
+                workspaces, exit confirmation guard, and daily focus time tracking.</li>
+              <li><strong>Quick Search (<kbd>Alt+S</kbd> / <kbd>&cmd;+K</kbd>):</strong> Fuzzy search via Fuse.js across
+                active tabs, closed workspace tabs, resources, tasks, and history.</li>
+            </ul>
+
+            <h3>Performance &amp; Memory</h3>
+            <ul>
+              <li><strong>Tab Sleeping:</strong> Leverages Chrome native tab discarding to free RAM on idle tabs.
+                Supports thresholds, exclusion of pinned tabs, active audio, and customizable domain whitelists.</li>
+              <li><strong>Sleeping on Restore:</strong> Restored tabs from previous workspaces remain asleep until
+                clicked, making workspace switching instant.</li>
+            </ul>
+
+            <h3>Data, Privacy &amp; Customization</h3>
+            <ul>
+              <li><strong>100% Local &amp; Private:</strong> Data stored in IndexedDB (Dexie.js). No account required,
+                zero network requests, no analytics.</li>
+              <li><strong>Backup &amp; Export v3:</strong> Full JSON backup export and import (Merge or Replace modes)
+                with backward compatibility for v1 and v2 formats.</li>
+              <li><strong>Automatic Backups:</strong> Optional automated export to
+                <code>Downloads/Smart-Workspace-Tabs/</code> using alarms.
+              </li>
+              <li><strong>Branding &amp; Theming:</strong> Light and dark modes styled with the Grupo Ōkami teal color
+                palette. Customizable background pattern or uploaded image with adjustable dimming.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Upcoming / Roadmap -->
+        <article class="timeline-entry">
+          <div class="timeline-header">
+            <span class="timeline-version">Upcoming</span>
+            <span class="timeline-badge"
+              style="background: var(--bg-subtle); color: var(--text-muted); border: 1px solid var(--border-subtle);">In
+              Development</span>
+            <span class="timeline-date">Future Roadmap</span>
+          </div>
+          <div class="content-section">
+            <ul>
+              <li>Configurable keyboard shortcuts for quick workspace cycle switching.</li>
+              <li>Enhanced export formats (Markdown list export for workspace resources and notes).</li>
+              <li>Extended workspace color themes and custom icon upload.</li>
+              <li>Domain view regex and wildcard matching rules.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link">
+            <img src="assets/img/logo.png" alt="Smart-Workspace-Tabs logo" class="brand-logo">
+            <div class="brand-title">
+              <span class="brand-name">Smart-Workspace-Tabs</span>
+              <span class="brand-tag">Local Workspaces</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Organize tabs into workspaces. 100% local, no telemetry, no tracking, built for privacy and performance.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#showcase">Preview Gallery</a></li>
+            <li><a href="index.html#install">Install Extension</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Documentation</h4>
+          <ul class="footer-links">
+            <li><a href="help.html">Help &amp; FAQ</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+            <li><a href="help.html#shortcuts">Shortcuts</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Community &amp; Source</h4>
+          <ul class="footer-links">
+            <li><a href="es/changelog.html" hreflang="es" lang="es">Versión en Español</a></li>
+            <li><a href="ja/changelog.html" hreflang="ja" lang="ja">日本語版</a></li>
+            <li><a href="https://github.com/kaxzwisx/smart-workspace-tabs" target="_blank"
+                rel="noopener noreferrer">GitHub Repository</a></li>
+            <li><a href="https://github.com/kaxzwisx/smart-workspace-tabs/issues" target="_blank"
+                rel="noopener noreferrer">Submit Feature Request</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Smart-Workspace-Tabs. All rights reserved.</div>
+        <div>Continuous improvement driven by privacy and user focus.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

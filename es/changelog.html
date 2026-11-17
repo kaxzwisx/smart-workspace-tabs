@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Cambios - Smart-Workspace-Tabs</title>
+  <meta name="description"
+    content="Historial de versiones y notas de lanzamiento de la extensión Smart-Workspace-Tabs para Chrome.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="../assets/img/logo.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="alternate" hreflang="en" href="https://kaxzwisx.github.io/smart-workspace-tabs/changelog.html">
+  <link rel="alternate" hreflang="es" href="https://kaxzwisx.github.io/smart-workspace-tabs/es/changelog.html">
+  <link rel="alternate" hreflang="ja" href="https://kaxzwisx.github.io/smart-workspace-tabs/ja/changelog.html">
+  <link rel="alternate" hreflang="x-default" href="https://kaxzwisx.github.io/smart-workspace-tabs/changelog.html">
+</head>
+
+<body>
+
+  <!-- Navegación del Sitio -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link">
+        <img src="../assets/img/logo.png" alt="Logotipo de Smart-Workspace-Tabs" class="brand-logo">
+        <div class="brand-title">
+          <span class="brand-name">Smart-Workspace-Tabs</span>
+          <span class="brand-tag">Espacios Locales</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html#features" class="nav-link">Características</a></li>
+          <li><a href="index.html#showcase" class="nav-link">Capturas</a></li>
+          <li><a href="privacy.html" class="nav-link">Privacidad</a></li>
+          <li><a href="help.html" class="nav-link">Ayuda y FAQ</a></li>
+          <li><a href="changelog.html" class="nav-link active">Novedades</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Selector de Idioma -->
+        <a href="../changelog.html" class="btn-control" hreflang="en" lang="en" title="Switch to English"
+          aria-label="Switch to English">
+          <span>EN</span>
+        </a>
+        <a href="../ja/changelog.html" class="btn-control" hreflang="ja" lang="ja" title="日本語に切り替え"
+          aria-label="日本語に切り替え">
+          <span>JA</span>
+        </a>
+        <button id="theme-toggle" class="btn-control" type="button" aria-label="Cambiar tema">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
+          </svg>
+        </button>
+
+        <a href="index.html#install" class="btn btn-primary">
+          <span>Instalar Extensión</span>
+        </a>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <div class="badge badge-brand" style="margin-bottom: 0.75rem;">Historial de Versiones</div>
+        <h1 class="page-title">Registro de Cambios</h1>
+        <p class="page-subtitle">
+          Consulta las mejoras, correcciones y nuevas funcionalidades añadidas a Smart-Workspace-Tabs.
+        </p>
+      </div>
+    </div>
+
+    <div class="container content-body">
+      <div class="timeline">
+
+        <!-- Entrada: Versión 1.0.0 -->
+        <article class="timeline-entry">
+          <div class="timeline-header">
+            <span class="timeline-version">v1.0.0</span>
+            <span class="timeline-badge">Lanzamiento Oficial</span>
+            <span class="timeline-date">Noviembre 2026</span>
+          </div>
+
+          <div class="content-section" style="margin-bottom: 1.5rem;">
+            <h3>Gestión de Espacios y Pestañas</h3>
+            <ul>
+              <li><strong>Espacios de Trabajo Locales:</strong> Asigna a cada tarea un espacio dedicado. Al alternar
+                entre ellos, se guardan y cierran las pestañas activas, cargando las del nuevo espacio en la misma
+                ventana.</li>
+              <li><strong>Importación Automática Inicial:</strong> En la primera instalación, cada ventana abierta se
+                convierte de inmediato en un espacio de trabajo inicial sin pérdida de datos.</li>
+              <li><strong>Autoguardado Inteligente (~0.5 s):</strong> Toda modificación en pestañas (apertura, cierre,
+                reordenación o agrupación) se sincroniza con IndexedDB en tiempo real con bloqueos seguros por ventana.
+              </li>
+              <li><strong>Convertidor de Grupos de Pestañas:</strong> Convierte en un clic los grupos nativos de Chrome
+                en espacios individuales, conservando títulos, colores y pestañas interiores.</li>
+              <li><strong>Arrastrar y Soltar:</strong> Arrastra pestañas o selecciones múltiples hacia la barra lateral
+                o al área de creación de espacios nuevos.</li>
+            </ul>
+
+            <h3>Productividad y Organización</h3>
+            <ul>
+              <li><strong>Panel de Control Fijo:</strong> Pestaña persistente en cada ventana que incluye Inicio,
+                Biblioteca completa, Carpetas y Lista global de Tareas pendientes.</li>
+              <li><strong>Tablero del Espacio:</strong> Vista en dos columnas con pestañas abiertas y recursos guardados
+                por secciones, con cajón lateral para notas rápidas y tareas.</li>
+              <li><strong>Vistas por Dominio:</strong> Filtra pestañas de un mismo sitio web con acciones en lote
+                (enfocar, cerrar, guardar o desduplicar).</li>
+              <li><strong>Limpiador de Pestañas Duplicadas:</strong> Encuentra duplicados exactos o páginas idénticas
+                ignorando parámetros de sesión, con vista previa antes de cerrar.</li>
+              <li><strong>Sesiones de Enfoque:</strong> Temporizador integrado (15, 25, 50 min o personalizado) con
+                atenuación de espacios secundarios, aviso al intentar salir y métricas de minutos concentrados por día.
+              </li>
+              <li><strong>Búsqueda Rápida (<kbd>Alt+S</kbd> / <kbd>&cmd;+K</kbd>):</strong> Búsqueda difusa instantánea
+                sobre pestañas abiertas, cerradas, enlaces guardados, tareas e historial.</li>
+            </ul>
+
+            <h3>Rendimiento y Optimización de Memoria</h3>
+            <ul>
+              <li><strong>Suspensión de Pestañas Inactivas:</strong> Usa la API nativa de Chrome para liberar memoria
+                RAM. Permite configurar tiempos de inactividad y proteger pestañas con audio, fijadas o sitios en lista
+                blanca.</li>
+              <li><strong>Suspensión al Restaurar:</strong> Las pestañas de espacios anteriores se cargan en segundo
+                plano suspendidas para que el cambio de espacio sea instantáneo.</li>
+            </ul>
+
+            <h3>Privacidad, Respaldo y Diseño</h3>
+            <ul>
+              <li><strong>100% Local y Privado:</strong> Todos los datos se almacenan en IndexedDB localmente sin
+                recopilación de telemetría ni conexión a servidores externos.</li>
+              <li><strong>Motor de Respaldo v3:</strong> Exportación e importación en formato JSON (modos Combinar o
+                Reemplazar) con compatibilidad hacia atrás con respaldos v1 y v2.</li>
+              <li><strong>Copias Automáticas Programadas:</strong> Respaldo periódico automático en tu carpeta de
+                <code>Descargas/Smart-Workspace-Tabs/</code>.
+              </li>
+              <li><strong>Diseño y Paleta de Colores:</strong> Modo claro y oscuro con la elegante paleta azul verdosa
+                inspirada en el arte de Grupo Ōkami, con patrones o imágenes de fondo personalizables.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Próximas Mejoras -->
+        <article class="timeline-entry">
+          <div class="timeline-header">
+            <span class="timeline-version">En Desarrollo</span>
+            <span class="timeline-badge"
+              style="background: var(--bg-subtle); color: var(--text-muted); border: 1px solid var(--border-subtle);">Hoja
+              de Ruta</span>
+            <span class="timeline-date">Próximas Actualizaciones</span>
+          </div>
+          <div class="content-section">
+            <ul>
+              <li>Atajos de teclado configurables para rotar secuencialmente entre espacios abiertos.</li>
+              <li>Exportación de recursos y notas en formato Markdown limpio.</li>
+              <li>Más temas de color para espacios y subida de iconos personalizados.</li>
+              <li>Soporte de expresiones regulares en las reglas de vistas de dominio.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Pie de Página -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link">
+            <img src="../assets/img/logo.png" alt="Logotipo de Smart-Workspace-Tabs" class="brand-logo">
+            <div class="brand-title">
+              <span class="brand-name">Smart-Workspace-Tabs</span>
+              <span class="brand-tag">Espacios Locales</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Organiza tus pestañas en espacios. 100% local, sin telemetría ni rastreo. Privacidad garantizada.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#features">Características</a></li>
+            <li><a href="index.html#showcase">Galería de Capturas</a></li>
+            <li><a href="index.html#install">Instalar Extensión</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Documentación</h4>
+          <ul class="footer-links">
+            <li><a href="help.html">Ayuda y FAQ</a></li>
+            <li><a href="privacy.html">Política de Privacidad</a></li>
+            <li><a href="changelog.html">Registro de Cambios</a></li>
+            <li><a href="help.html#shortcuts">Atajos de Teclado</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Comunidad y Código</h4>
+          <ul class="footer-links">
+            <li><a href="../changelog.html" hreflang="en" lang="en">English Version</a></li>
+            <li><a href="../ja/changelog.html" hreflang="ja" lang="ja">日本語版</a></li>
+            <li><a href="https://github.com/kaxzwisx/smart-workspace-tabs" target="_blank"
+                rel="noopener noreferrer">Repositorio en GitHub</a></li>
+            <li><a href="https://github.com/kaxzwisx/smart-workspace-tabs/issues" target="_blank"
+                rel="noopener noreferrer">Proponer Mejora</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Smart-Workspace-Tabs. Todos los derechos reservados.</div>
+        <div>Desarrollo continuo con enfoque en la privacidad del usuario.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
